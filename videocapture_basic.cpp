@@ -55,7 +55,8 @@ int main(int, char**)
             break;
         }
         // show live and wait for a key with timeout long enough to show images
-        imshow("Live", frame_left);
+        imshow("Live_left", frame_left);
+        imshow("Live_right", frame_right);
 
 
 	key = waitKey(5);
@@ -68,7 +69,8 @@ int main(int, char**)
         sprintf(filename_right,"right%d.jpg",count);
 	    imwrite(filename_left,frame_left);
 	    imwrite(filename_right,frame_right);
-	    imshow("image",frame_left);
+	    imshow("leftimage",frame_left);
+	    imshow("rightimage", frame_right);
 	}  
 
     }
