@@ -3,6 +3,7 @@ Computer vsion programs related to camera calibration, video capturing and some 
 GSL(GNU Scientific Library) programs to find polynomial roots.
 
 *** COMPILE OF OPENCV PROGRAM (1-5) ***
+
 g++ `pkg-config opencv --cflags` videocapture\_basic.cpp -o videocapture_basic `pkg-config opencv --libs`
 (In the commandline, the above '\' doesn't exist. '\_' means blank space. we add a back slant to tell the .md file that the '_' doesn't means italic.)
 
@@ -36,6 +37,7 @@ g++ `pkg-config opencv --cflags` videocapture\_basic.cpp -o videocapture_basic `
      ./stereo_match left01.jpg right01.jpg --algorithm=hh --blocksize=5 --max-disparity=256 --scale=1.0 --no-display -i=intrinsics.yml -e=extrinsics.yml -o=disparity.jpg  */
 
 *** COMPILE OF GSL PROGRAM (6) ***
+
 g++ -o GSLtest GSLtest.cpp -I/usr/local/include -L/usr/local/lib -lgsl -lgslcblas -lm 
 
 6.GSLtest.cpp:
