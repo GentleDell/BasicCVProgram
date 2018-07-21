@@ -2,7 +2,7 @@
 Computer vsion programs related to camera calibration, video capturing and some other basic functions;
 GSL(GNU Scientific Library) programs to find polynomial roots.
 
-*** COMPILE OF OPENCV PROGRAM (1-5) ***
+*** COMPILE OF OPENCV PROGRAM ***
 
 g++ `pkg-config opencv --cflags` videocapture\_basic.cpp -o videocapture_basic `pkg-config opencv --libs`
 (In the commandline, the above '\' doesn't exist. '\_' means blank space. we add a back slant to tell the .md file that the '_' doesn't means italic.)
@@ -36,14 +36,22 @@ g++ `pkg-config opencv --cflags` videocapture\_basic.cpp -o videocapture_basic `
     /* USAGE:
      ./stereo_match left01.jpg right01.jpg --algorithm=hh --blocksize=5 --max-disparity=256 --scale=1.0 --no-display -i=intrinsics.yml -e=extrinsics.yml -o=disparity.jpg  */
 
-*** COMPILE OF GSL PROGRAM (6) ***
+6.launching_viz.cpp:
+    Sample program to test viz lib.
+    Output is an empty viz window.
+    /* USAGEL
+     ./ launching_viz */
+    ATTENTION: In order to use the viz lib, it's necessary to reinstall the OpenCV with VTK (Visulization ToolKit) support. A tutorial about the installation is "https://blog.csdn.net/dell5200/article/details/81142951"
+
+*** COMPILE OF GSL PROGRAM ***
 
 g++ -o GSLtest GSLtest.cpp -I/usr/local/include -L/usr/local/lib -lgsl -lgslcblas -lm 
 
-6.GSLtest.cpp:
+1.GSLtest.cpp:
     GSL program to obtain polynomial roots.
     /* USAGE:
      ./GSLtest  */
+    
 
 
 
